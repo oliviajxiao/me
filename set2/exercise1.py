@@ -16,21 +16,25 @@ import platform
 
 # I think this will print "hello! Let's get started" by calling the print function.
 print("hello! Let's get started")  # it printed "hello! Let's get started"
+# It will list the words
+some_words = ["what", "does", "this", "line", "do", "?"] # it doesn't display it, it just puts it under 'variables'
 
-some_words = ["what", "does", "this", "line", "do", "?"]
-
+# it'll print some_words
 for word in some_words:
-    print(word)
+    print(word)#it prints all the words in the list
 
+# Exact same as what happened above
 for x in some_words:
-    print(x)
-
+    print(x) # Exact same as what happened above
+# It will write the whole list out
 print(some_words)
-
+# It wrote the whole list out
+# It will print "some_words contains more than 3 words"
 if len(some_words) > 3:
     print("some_words contains more than 3 words")
+# It will print "some_words contains more than 3 words"
 
-
+# It prints nothing
 def usefulFunction():
     """
     You may want to look up what uname does before you guess
@@ -39,5 +43,6 @@ def usefulFunction():
     """
     print(platform.uname())
 
-
+# It prints nothing
 usefulFunction()
+# It printed nothing

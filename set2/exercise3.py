@@ -8,7 +8,7 @@ def is_odd(a_number):
     Look into modulo division using the '%' operator as one way of doing this.
 
     e.g. 4 % 2 = 0
-        13 %12 = 1
+        13 % 12 = 1
          3 % 2 = 1
 
     So if a_number modulo two is zero, then it's even.
