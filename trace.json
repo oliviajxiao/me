@@ -1,8 +1,8 @@
 [
   "1",
   {
-    "of_total": 34,
-    "mark": 20,
+    "of_total": 35,
+    "mark": 31,
     "results": [
       {
         "value": 1,
@@ -81,43 +81,47 @@
         "name": "Exercise 0: shout_with_a_number - hi, 1 => HI 1"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 2: debug the file"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: is_odd - is 2 odd"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: is_odd - is 5 odd"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: fix_it - it moves, and it should  move"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: fix_it - it moves, and it should not move"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: fix_it - it does not move, and it should  move"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: fix_it - it does not move, and it should not move"
       },
       {
-        "value": 0,
+        "value": 1,
+        "name": "Exercise 3: loops_1a - 1d for loop"
+      },
+      {
+        "value": 1,
         "name": "Exercise 3: loops_1c - 1d with arguments"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: loops_2 - 10\u00d710 stars"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: loops_3 - 10 matching lists"
       },
       {

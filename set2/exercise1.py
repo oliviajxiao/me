@@ -21,7 +21,7 @@ some_words = ["what", "does", "this", "line", "do", "?"] # it doesn't display it
 
 # it'll print some_words
 for word in some_words:
-    print(word)#it prints all the words in the list
+    print(word) # it prints all the words in the list
 
 # Exact same as what happened above
 for x in some_words:
@@ -42,6 +42,7 @@ def usefulFunction():
     https://docs.python.org/3/library/platform.html#platform.uname
     """
     print(platform.uname())
+    # it gives uname_result. Provides the system, node, release, version, and machine.
 
 # It prints nothing
 usefulFunction()

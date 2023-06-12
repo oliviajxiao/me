@@ -13,7 +13,7 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return None
+    return (a_number % 2) != 0
 
 
 def fix_it(moves=True, should_move=True):
@@ -31,7 +31,14 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+
+    if moves and not should_move:
+        return "Duct Tape"
+    elif not moves and should_move:
+        return "WD-40"
+    else:
+        return "No Problem"
+
 
 
 def loops_preview():
@@ -54,7 +61,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -67,7 +77,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
+    symbol_list = []
+    for i in range(number_of_items):
+        symbol_list.append(symbol)
+    return symbol_list
 
 
 def loops_2():
@@ -88,7 +101,10 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    big_star_list = []
+    for j in range(10):
+        big_star_list.append(loops_1c(number_of_items=10, symbol='*'))
+    return big_star_list
 
 
 def loops_3():
@@ -112,7 +128,14 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    number_square = []
+    for i in range(10):
+        number_row = []
+        for j in range(10):
+            number_row.append(str(i))
+        number_square.append(number_row)
+
+    return number_square
 
 
 def loops_4():
@@ -132,8 +155,6 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
-
 
 def loops_5():
     """Make the coordinates of the block.
