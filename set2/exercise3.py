@@ -227,7 +227,7 @@ def loops_6():
         formula = (i + 1)
         number = []
         for j in range(formula):
-            number.append(j)
+            number.append(str(j))
         wedge.append(number)
     return wedge
 
