@@ -156,6 +156,15 @@ def loops_4():
     ]
     """
 
+    number_square = []
+    for i in range(10):
+        number_row = []
+        for j in range(10):
+            number_row.append(str(j))
+        number_square.append(number_row)
+
+    return number_square
+
 def loops_5():
     """Make the coordinates of the block.
 
@@ -183,7 +192,13 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    rows = []
+    for x in range(10):
+        coord = []
+        for y in range(5):
+            coord.append(f"(i{str(x)}, j{str(y)})")
+        rows.append(coord)
+    return rows
 
 
 def loops_6():
@@ -206,7 +221,15 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    
+    wedge = []
+    for i in range(10):
+        formula = (i + 1)
+        number = []
+        for j in range(formula):
+            number.append(j)
+        wedge.append(number)
+    return wedge
 
 
 def loops_7():
@@ -230,6 +253,10 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+    triangle = []
+    for i in range(5):
+        space = []
+        
     return None
 
 
