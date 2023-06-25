@@ -17,7 +17,10 @@ def loop_ranger(start=2, stop=10, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    my_range = []
+    for i in range(start, stop, step):
+        my_range.append(i)
+    return my_range
 
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
@@ -27,7 +30,7 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    return list(range(start, stop, 2))
 
 
 def stubborn_asker(low, high):
@@ -38,8 +41,11 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    return None
-
+    i = 29
+    while i<low or i>high:
+        i = int(input("input a number: "))
+    print('thanks')
+    return i
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
@@ -48,16 +54,27 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    while True:
+        try:
+            j = int(input(message))
+            break
+        except ValueError:
+            print('please give an ACTUAL number')
+    return j
 
-
-def super_asker(low, high):
+def super_asker(low, high,):
     """Robust asking function.
 
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
-    return None
+    i = 29
+    while i<low or i>high:
+        try:
+            i = int(input("Enter a number: "))
+        except ValueError:
+            print('please give an ACTUAL number')
+    return i
 
 
 if __name__ == "__main__":
