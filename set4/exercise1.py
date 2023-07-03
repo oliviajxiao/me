@@ -150,7 +150,7 @@ def diarist():
     """
     laser_count = 0
 
-    with open("Trispokedovetiles(laser).gcode", "r") as file:
+    with open("set4/Trispokedovetiles(laser).gcode", "r") as file:
         for line in file:
             if "M10 P1" in line:
                 laser_count += 1
