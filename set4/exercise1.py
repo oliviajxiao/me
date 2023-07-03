@@ -82,22 +82,18 @@ def wordy_pyramid():
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
     pyramid = []
-
     for length in range(3, 21, 2):
         url =  f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={length}"
         response = requests.get(url)
-        if response.status_code == 200:
-            word = response.text.strip()
-            pyramid.append(word)
+        word = response.text.strip()
+        pyramid.append(f"{word}")
 
-    for length in range(20, 4, -2):
+    for length in range(19, 2, -2):
         url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={length}"
         response = requests.get(url)
-        if response.status_code == 200:
-            word = response.text.strip()
-            pyramid.append(word)
-
-    return pyramid[:-1]
+        word = response.text.strip()
+        pyramid.append(f"{word}")
+    return pyramid
 
 
 def pokedex(low=1, high=5):
@@ -152,8 +148,15 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    with open(LOCAL + "/Trispokedovetiles(laser).gcode") as lasers_file:
-        laser_count = json.load(lasers_file)
+    laser_count = 0
+
+    with open("Trispokedovetiles(laser).gcode", "r") as file:
+        for line in file:
+            if "M10 P1" in line:
+                laser_count += 1
+
+    with open("Set4/lasers.pew", "w") as output_file:
+        output_file.write(str(laser_count))
     pass
 
 
