@@ -37,10 +37,14 @@ def get_some_details():
          dictionary, you'll need integer indeces for lists, and named keys for
          dictionaries.
     """
-    json_data = open(LOCAL + "/lazyduck.json").read()
-
-    data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    with open(LOCAL + "/lazyduck.json") as json_file:
+        json_data = json.load(json_file)
+    last_name = json_data["results"][0]["name"]["last"]
+    password = json_data["results"][0]["login"]["password"]
+    postcode = int(json_data["results"][0]["location"]["postcode"])
+    id_value = int(json_data["results"][0]["id"]["value"])
+    postcode_plus_id = postcode + id_value
+    return {"lastName": last_name, "password": password, "postcodePlusID": postcode_plus_id}
 
 
 def wordy_pyramid():
@@ -79,7 +83,21 @@ def wordy_pyramid():
     """
     pyramid = []
 
-    return pyramid
+    for length in range(3, 21, 2):
+        url =  f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={length}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            word = response.text.strip()
+            pyramid.append(word)
+
+    for length in range(20, 4, -2):
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={length}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            word = response.text.strip()
+            pyramid.append(word)
+
+    return pyramid[:-1]
 
 
 def pokedex(low=1, high=5):
@@ -102,7 +120,19 @@ def pokedex(low=1, high=5):
     if r.status_code is 200:
         the_json = json.loads(r.text)
 
-    return {"name": None, "weight": None, "height": None}
+    tallest_pokemon = {"name": None, "weight": None, "height": None}
+
+    for id in range (low, high):
+        url = f"https://pokeapi.co/api/v2/pokemon/{id}"
+        r = requests.get(url)
+        if r.status_code is 200:
+            pokemon_data = json.loads(r.text)
+            height = pokemon_data["height"]
+            if tallest_pokemon["height"] is None or height > tallest_pokemon["height"]:
+                tallest_pokemon["name"] = pokemon_data["name"]
+                tallest_pokemon["weight"] = pokemon_data["weight"]
+                tallest_pokemon["height"] = height
+    return {"name": tallest_pokemon["name"], "weight": tallest_pokemon["weight"], "height": tallest_pokemon["height"]}
 
 
 def diarist():
@@ -122,6 +152,8 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
+    with open(LOCAL + "/Trispokedovetiles(laser).gcode") as lasers_file:
+        laser_count = json.load(lasers_file)
     pass
 
 
