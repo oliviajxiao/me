@@ -86,13 +86,13 @@ def wordy_pyramid():
         url =  f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={length}"
         response = requests.get(url)
         word = response.text.strip()
-        pyramid.append(f"{word}")
+        pyramid.append(word)
 
-    for length in range(19, 2, -2):
+    for length in range(20, 2, -2):
         url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={length}"
         response = requests.get(url)
         word = response.text.strip()
-        pyramid.append(f"{word}")
+        pyramid.append(word)
     return pyramid
 
 

@@ -55,7 +55,7 @@ def advancedGuessingGame():
             print("a better value please")
         print(f"You guessed {guessedNumber},")
         if guessedNumber == actualNumber:
-            print(f"You got it!! It was {actualNumber}")
+            print(f"Yaaaayyy!! It was {actualNumber}")
             guessed = True
         elif guessedNumber < actualNumber:
             print("No. Horrible guess. Too small. ")
