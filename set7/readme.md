@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Starting the data audit process. I find it helpful to just use the basic pandas file to figure out where to start. It was a good introductory file, and helped me think that I may look further into host_location and host_name (some businesses running on AirBNB rather than individuals which I thought could be interesting)

@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+I MADE A MAP. I'm very proud. I used the same GIS file from the maps thing in class. Although it is all of NSW, I learnt how to zoom into the Sydney area. It was time saving cause I used the same code as in class, where it zoomed out and in relative to the distance from UNSW campus. I was also able to put my own data set using the lat longs provided over the top of the GIS file. I'm wondering though whether I can zoom into this map, but also have the lat long points zoom in accordingly too. 

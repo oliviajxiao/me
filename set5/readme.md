@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week I began on the data project. I was only able to just start looking around for data. I'm finding it hard to find something interesting.

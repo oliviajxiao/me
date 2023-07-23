@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+ChatGPT is really helpful to explain the processes of certain exercises in the exam. Although it can be time consuming cause it takes some time to read, also I have had a couple of times where ChatGPT makes mistakes which is even more time consuming. 

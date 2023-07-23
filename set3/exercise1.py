@@ -5,7 +5,7 @@ Modify each function until the tests pass.
 """
 
 
-def loop_ranger(start=2, stop=10, step=1):
+def loop_ranger(start, stop, step):
     """Return a list of numbers between start and stop in steps of step.
 
     Using a while loop make a list of numbers that goes from the start number up
